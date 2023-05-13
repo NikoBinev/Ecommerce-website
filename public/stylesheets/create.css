@@ -1,0 +1,40 @@
+.pedal{
+    border: 0px solid #04ece1;
+    border-radius: 15px;
+    padding: 100px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    max-width: 500px;
+    background: -webkit-linear-gradient(to right, #45a29e, #116466);
+    background: linear-gradient(to right, #45a29e, #116466);
+}
+
+.title, 
+.price,
+.image,
+.information{
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #131313;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    background-color: #131313;
+    color: #ffcb9a;
+    resize: none;
+}
+
+.titleText{
+    color: white;
+}
+.imageText{
+    color: white;
+}
+.priceText{
+    color: white;
+}
+.productText{
+    color: white;
+}
