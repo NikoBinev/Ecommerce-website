@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+
+    <%- include('./partials/navbar.ejs') %>
+    <section class="details">
+        <div class="details-item">
+            <div class="details-image">
+                <img src="/<%= products.image.name %>" alt="">
+            </div>
+            <div class="details-info">
+                <h2><%= products.title %></h2>
+                <p><%= products.price %>$</p>
+                <p><%= products.body %></p>
+                <form action="/details/<%= products._id %>" method="post">
+                    <input type="hidden" value="<%= products.id %>" name="productID">
+                    <button class="buyBTN">Add to Cart</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>

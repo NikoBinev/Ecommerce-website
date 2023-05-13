@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    
+    <h1>REGISTER</h1>
+    <div class="LogInCard">
+        <h1 class="signUpText">Sign Up</h1><br>
+        <form action="/register" method="POST">
+            <div>
+                <label for="username">Userame</label>
+                <input type="text" id="username" class="username" name="username" placeholder="Username" required><br>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" class="password" name="email" placeholder="Email" required><br>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="password" placeholder="Password" required><br>
+            </div>
+            <button type="submit" class="buttonLogIn">Register</button><br><br>
+        </form>
+        <a href="/login" class="signInLink">Log In</a>
+    </div>      
+
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

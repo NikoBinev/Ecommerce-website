@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+<body>
+    
+    <!-- Navbar Section -->
+    <%- include('./partials/navbar.ejs') %>
+
+      <!-- ITEMS SECTION -->
+
+      <div class="product-title">
+        <h3>Product Catalogue</h3>
+      </div>
+
+      <section class="products">
+
+        <% if (products.length > 0) { %>
+          <% products.forEach(product => { %>
+            <div class="product-item">
+              <a class="single" href="/details/<%= product._id %>">
+                <div class="product-image">
+                  <img src="/<%= product.image.name %>" alt="#">
+                </div>
+                <div class="product-info">
+                  <h4 class="product-info-title"><%= product.title %></h5>
+                  <h4 class="product-info-price"><%= product.price %>$</h4>
+                </div>
+              </a>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <p>There are no blogs to display...</p>
+        <% } %>
+          <br>
+      </section>
+
+      <% if (hasNextPage) { %>
+        <a href="/products/data?page=<%= nextPage %>" class="nextbtn">Next</a>
+      <% } %>
+      <% if (hasPrevPage) { %>
+        <a href="/products/data?page=<%= prevPage %>" class="prevbtn">Back</a>
+      <% } %>
+
+    <!-- FOOTER SECTION -->
+
+    <%- include('./partials/footer.ejs') %>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

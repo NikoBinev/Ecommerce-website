@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="pedal">
+        <form action="/create" method="POST" enctype="multipart/form-data" class="pedali">
+            <label for="title" class="titleText">Product Title:</label>
+            <input type="text" class="title" name="title" id="title" required><br>
+            <label for="price" class="priceText">Product Price:</label>
+            <input type="text" class="price" id="price" name="price" required><br>
+            <label for="image" class="imageText">Product Image:</label>
+            <input type="file" class="image" id="image" name="image"><br>
+            <label for="body"  class="productText">Product Information:</label>
+            <textarea id="body" class="information" required name="body"></textarea><br>
+            <button class="buttonLogIn">Submit</button>
+        </form>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- <script src="/javascripts/script.js"></script> -->
+</body>
+</html>

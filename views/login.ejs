@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <div class="LogInCard">
+    <form action="/login" method="POST">
+      <h1 class="logInText">Log In</h1><br>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="username" placeholder="Username" required>
+      </div><br>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="password" placeholder="Password" required>
+      </div><br>
+      <button type="submit" value="Login" class="buttonLogIn">Login</button>
+      <br><br>
+    </form>
+    <a class="signUpLink" href="/register">Register</a>
+    </div>
+
+     <!-- FOOTER SECTION -->
+
+     <%- include('./partials/footer.ejs') %>
+
+  </body>
+</html>
